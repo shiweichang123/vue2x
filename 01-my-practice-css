@@ -1,0 +1,6 @@
+#vue-app {
+    width: 980px;
+    margin: 0 auto;
+    padding: 200px 200px;
+    border: 2px solid #000;
+}
