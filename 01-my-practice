@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="vue-app">
+        <button @click="add(10)">加</button>
+        <button @click="sr(10)">减</button>
+        <p>age:{{age}}</p>
+        <h1>双向数据绑定</h1>
+        <h4>方法绑定</h4>
+        <label for="">姓名：</label>
+        <input ref="names" type="text" @keyup="logName">
+        <span>{{names}}</span>
+        <label for="">年龄：</label>
+        <input ref="ages" type="text" @keyup="logAge">
+        <span>{{ages}}</span>
+        <br><br><br>
+        <h4>vue提供的v-model</h4>
+        <label for="">姓名：</label>
+        <input ref="namess" type="text" v-model="namess">
+        <span>{{namess}}</span>
+        <label for="">年龄：</label>
+        <input ref="agess" type="text" v-model="agess">
+        <span>{{agess}}</span>
+        <br><br><br>
+        <h2>计算属性</h2>
+        <h4>方法</h4>
+        <button @click="a++">A</button>
+        <button @click="b++">B</button>
+        <p>A-{{a}}</p>
+        <p>B-{{b}}</p>
+        <p>age + a = {{addToA()}}</p>
+        <p>age + b = {{addToB()}}</p>
+        <br><br>
+        <h4>computed计算属性</h4>
+        <button @click="c++">A</button>
+        <button @click="d++">B</button>
+        <p>A-{{c}}</p>
+        <p>B-{{d}}</p>
+        <p>age + c = {{addToC}}</p>
+        <p>age + d = {{addToD}}</p>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
