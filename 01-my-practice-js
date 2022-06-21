@@ -1,0 +1,48 @@
+new Vue({
+    el: "#vue-app",
+    data:{
+        a:0,
+        b:0,
+        c:0,
+        d:0,
+        age: 10,
+        ages:"",
+        names:"",
+        agess:"",
+        namess:""
+
+    },
+    methods:{
+        add:function(inc){
+            this.age += inc;
+        },
+        sr:function(inc){
+            this.age -= inc;
+        },
+        logName:function() {
+            this.names = this.$refs.names.value;
+            // console.log(this.names = this.$refs.names.value);
+        },
+        logAge:function() {
+            this.ages = this.$refs.ages.value;
+        },
+        addToA:function(){
+            // console.log('add to A');
+            return this.a + this.age;
+        },
+        addToB:function(){
+            // console.log('add to B');
+            return this.b + this.age;
+        }
+    },
+    computed:{
+        addToC:function(){
+            console.log('add to C');
+            return this.c + this.age;
+        },
+        addToD:function(){
+            console.log('add to D');
+            return this.d + this.age;
+        }
+    }
+});
